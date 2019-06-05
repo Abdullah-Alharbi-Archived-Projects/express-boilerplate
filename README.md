@@ -16,6 +16,8 @@ scalable express api structure
 | app_mongoUrl | `String` |
 | app_jwtSecretKey | `String` |
 | DEBUG | `String` |
+| PORT | `Number` |
+
 
 ## Debuggers
 **debuggers are start with `app:<Namespace>`**
