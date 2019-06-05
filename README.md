@@ -24,3 +24,4 @@ scalable express api structure
 |--|--|
 | db | database debugger |
 | server | server debugger |
+| * | debug all |
