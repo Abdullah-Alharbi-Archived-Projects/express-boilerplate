@@ -19,7 +19,7 @@ scalable express api structure
 
 ## Debuggers
 **debuggers are start with `app:<Type>`**
----
+
 |Type|Explain|
 |--|--|
 | db | database debugger |
