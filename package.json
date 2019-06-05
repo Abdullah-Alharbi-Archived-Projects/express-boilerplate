@@ -1,0 +1,22 @@
+{
+  "name": "express-api-structure",
+  "version": "1.0.0",
+  "description": "api structure",
+  "main": "app.js",
+  "scripts": {
+    "production": "node app.js",
+    "test": "nodemon app.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@hapi/joi": "15.0.3",
+    "config": "^3.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "mongoose": "^5.5.13",
+    "morgan": "^1.9.1"
+  },
+  "author": "AbdullahAlharbi",
+  "license": "ISC"
+}

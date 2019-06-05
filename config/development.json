@@ -1,0 +1,14 @@
+{
+  "port": 8001,
+  "db": {
+    "url": "mongodb://localhost/playground",
+    "useNewUrlParser": true,
+    "useFindAndModify": true
+  },
+  "logger": {
+    "active": true,
+    "level": "dev"
+  },
+  "static": "public",
+  "jwtSecretKey": "superDoperSecretKey"
+}

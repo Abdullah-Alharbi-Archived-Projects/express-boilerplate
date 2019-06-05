@@ -1,0 +1,6 @@
+{
+  "jwtSecretKey": "app_jwtSecretKey",
+  "db": {
+    "url": "app_mongoUrl"
+  }
+}
