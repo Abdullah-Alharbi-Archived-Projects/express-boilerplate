@@ -29,4 +29,5 @@ scalable express api structure
 | * | debug all |
 
 
-**middlewares folder is only for custom middlewares**
+**middlewares folder is only for custom middlewares** <br />
+**model name must be singler**
