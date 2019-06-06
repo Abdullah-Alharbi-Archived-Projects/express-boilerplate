@@ -1,0 +1,14 @@
+{
+  "port": 3001,
+  "db": {
+    "url": "mongodb://localhost/app_tests",
+    "useNewUrlParser": true,
+    "useFindAndModify": true
+  },
+  "logger": {
+    "active": true,
+    "level": "dev"
+  },
+  "static": "public",
+  "jwtSecretKey": "appSecretKey"
+}
