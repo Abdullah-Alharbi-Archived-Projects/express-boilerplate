@@ -1,5 +1,10 @@
 # express-api-structure
 scalable express api structure
+## Notes:
+-**middlewares folder is only for custom middlewares**
+- **model name must be singler**
+- **please use `jest` for unit testing**
+- **for integration testing use `supertest` to send http requests**
 
 ## Development Configurations
 |Properties|Default|Types|Explain|
@@ -27,9 +32,3 @@ scalable express api structure
 | db | database debugger |
 | server | server debugger |
 | * | debug all |
-
-
-**middlewares folder is only for custom middlewares** <br />
-**model name must be singler** <br />
-**please use `jest` for unit testing** <br>
-**for integration testing use `supertest` to send http requests**
