@@ -1,9 +1,12 @@
-const { Router } = require('express');
-const v1 = require('./api/v1/index');
+const { Router } = require("express");
+const users = require("./api/users");
+const auth = require("./api/auth");
 
 const router = Router();
 
-// /api/v/{version}/{resource}
-router.use('/1', v1);
+// REQUEST -> /api/{resource}/
+
+router.use("/users/", users);
+router.use("/auth/", auth);
 
 module.exports = router;
