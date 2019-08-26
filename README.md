@@ -2,6 +2,13 @@
 
 scalable express api structure
 
+## Installation
+
+- clone this repository
+- run `npm install` or `npm i`
+- run `npm run dev-linux` to start the development server for linux users
+- run `npm run dev-windows` to start the development server for windows users
+
 ## Notes:
 
 - **middlewares folder is only for custom middlewares**
@@ -13,12 +20,6 @@ scalable express api structure
 
 ```
 $ npm run production
-```
-
-### run in development mode
-
-```
-$ npm run dev-[windows || linux]
 ```
 
 ## Development Configurations
