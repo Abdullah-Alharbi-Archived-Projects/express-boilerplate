@@ -77,4 +77,4 @@ $ npm run dev-[windows || linux]
 | query      | `"lang"`         |
 | folderName | `"localization"` |
 
-**note: after adding the locale you don't forget to add `<locale>.json` to `localization` folder**
+**note: after adding the locale don't forget to add `<locale>.json` to `localization` folder**
