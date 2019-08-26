@@ -53,7 +53,7 @@ $ npm run dev-[windows || linux]
 
 ## Localization section
 
-\*\*to add a locale edit the `locales` property in `config/<environment>`
+**to add a locale edit the `locales` property in `config/<environment>`**
 
 ## Localization Options
 
