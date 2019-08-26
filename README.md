@@ -48,4 +48,33 @@ $ npm run dev-[windows || linux]
 | --------- | ----------------- |
 | db        | database debugger |
 | server    | server debugger   |
+| i18n      | locale debugger   |
 | \*        | debug all         |
+
+## Localization section
+
+\*\*to add a locale edit the `locales` property in `config/<environment>`
+
+## Localization Options
+
+| Option     | Note                                             |
+| ---------- | ------------------------------------------------ |
+| activate   | activates the module                             |
+| locales    | available languages                              |
+| default    | default language                                 |
+| cookieName | cookie name if you want to store the user locale |
+| query      | query string to change the current locale        |
+| folderName | locale folder name                               |
+
+## Default config
+
+| Option     | value            |
+| ---------- | ---------------- |
+| activate   | `true`           |
+| locales    | `["ar", "en"]`   |
+| default    | `"ar"`           |
+| cookieName | `"lang"`         |
+| query      | `"lang"`         |
+| folderName | `"localization"` |
+
+**note: after adding the locale you want don't forget to add `<locale>.json` to `localization` folder**
