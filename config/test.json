@@ -10,5 +10,13 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": "appSecretKey"
+  "jwtSecretKey": "appSecretKey",
+  "localization": {
+    "activate": true,
+    "locales": ["ar", "en"],
+    "default": "ar",
+    "cookieName": "lang",
+    "query": "lang",
+    "folderName": "localization"
+  }
 }
