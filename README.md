@@ -79,3 +79,75 @@ $ npm run production
 | folderName | `"localization"` |
 
 **note: after adding the locale don't forget to add `<locale>.json` to `localization` folder**
+
+## The structure
+
+```
+|-- app.js // entry file
+
+|-- config // all the configurations for different environments
+
+|-- helpers // helper functions custom validation etc...
+
+|-- middleware // custom middleware for specific routes
+
+|-- localization // locale files
+
+|-- models // database models goes here
+
+|-- public // images, styles, etc...
+
+|-- routes // all the routes defined there
+
+|-- startup // the startup process here you can do something while running the server
+            // default middlewares, connect to another database, winston, etc...
+
+    |-- middleware // custom global middlewares
+
+`-- tests //
+    |-- integration // all the integration tests goes here
+    |-- unit // all the unit tests and mock ups goes here
+```
+
+## Create Api Endpoint
+
+1. go to `./routes/api/`
+2. create new folder with the following structure:
+
+```
+|-- <resource_name> // like users
+    |-- middleware // export middleware function
+      ^-- index.js
+      ^-- create.js
+      ^-- update.js
+      `-- delete.js
+    |-- index.js // define your routes here [entry]
+```
+
+## Entry File structure
+
+```
+const { Router } = require("express");
+const index = require("./api/resource/index"); // note: you can do "./api/resource/" which will point to index.js by default
+                                               // this is just to clear the structure for you
+const create = require("./api/resource/create");
+const update = require("./api/resource/update");
+const _delete = require("./api/resource/delete"); // don't forget delete is a keyword !
+
+const router = Router();
+
+router.get("/<resource>/", index)
+      .post("/<resource>/", create)
+      .put("/<resource>/:id", update);
+      .delete("/<resource>/:id", delete);
+
+module.exports = router;
+```
+
+## route middleware structure
+
+```
+module.exports = async (req, res) => {
+  // do something
+};
+```
