@@ -153,7 +153,7 @@ const router = Router();
 router.get("/<resource>/", index)
       .post("/<resource>/", create)
       .put("/<resource>/:id", update)
-      .delete("/<resource>/:id", delete);
+      .delete("/<resource>/:id", _delete);
 
 module.exports = router;
 ```
