@@ -52,6 +52,20 @@ $ npm run production
 | i18n      | locale debugger   |
 | \*        | debug all         |
 
+**activate debugger run**
+
+- linux:
+
+```
+export DEBUG=app:<namespace>
+```
+
+- windows:
+
+```
+set DEBUG=app:<namespace>
+```
+
 ## Localization section
 
 **to add a locale edit the `locales` property in `config/<environment>`**
