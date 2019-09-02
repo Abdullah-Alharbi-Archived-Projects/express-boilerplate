@@ -52,7 +52,7 @@ $ npm run production
 | i18n      | locale debugger   |
 | \*        | debug all         |
 
-**activate debugger run**
+**to activate debugger run**
 
 - linux:
 
