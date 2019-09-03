@@ -142,11 +142,11 @@ set DEBUG=app:<namespace>
 
 ```
 const { Router } = require("express");
-const index = require("./api/resource/index"); // note: you can do "./api/resource/" which will point to index.js by default
+const index = require("./middleware/index"); // note: you can do "./api/resource/" which will point to index.js by default
                                                // this is just to clear the structure for you
-const create = require("./api/resource/create");
-const update = require("./api/resource/update");
-const _delete = require("./api/resource/delete"); // don't forget delete is a keyword !
+const create = require("./middleware/create");
+const update = require("./middleware/update");
+const _delete = require("./middleware/delete"); // don't forget delete is a keyword !
 
 const router = Router();
 
