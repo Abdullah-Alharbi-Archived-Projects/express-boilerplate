@@ -1,9 +1,9 @@
 const { Router } = require("express");
+const v1 = require("./v1/");
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.status(200).send({ token: req.__("auth") });
-});
+// versions goes here
+router.use("/v1/", v1);
 
 module.exports = router;

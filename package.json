@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "production": "node app.js",
-    "dev-linux": "export debug=app:* && nodemon app.js",
-    "dev-windows": "set debug=app:* && nodemon app.js"
+    "dev:linux": "export debug=app:* && nodemon app.js",
+    "dev:windows": "set debug=app:* && nodemon app.js"
   },
   "keywords": [],
   "dependencies": {

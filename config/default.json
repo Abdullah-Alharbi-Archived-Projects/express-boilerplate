@@ -10,13 +10,5 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": "",
-  "localization": {
-    "activate": false,
-    "locales": [],
-    "default": "",
-    "cookieName": "",
-    "query": "",
-    "folderName": "localization"
-  }
+  "jwtSecretKey": ""
 }

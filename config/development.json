@@ -10,13 +10,5 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": "superDoperSecretKey",
-  "localization": {
-    "activate": true,
-    "locales": ["ar", "en"],
-    "default": "ar",
-    "cookieName": "lang",
-    "query": "lang",
-    "folderName": "localization"
-  }
+  "jwtSecretKey": "superDoperSecretKey"
 }
