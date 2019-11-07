@@ -10,5 +10,7 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": "appSecretKey"
+  "jwtSecretKey": "appSecretKey",
+  "etag": false,
+  "powered-by": true
 }

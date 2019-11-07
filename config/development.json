@@ -10,5 +10,7 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": "superDoperSecretKey"
+  "jwtSecretKey": "superDoperSecretKey",
+  "etag": false,
+  "powered-by": true
 }

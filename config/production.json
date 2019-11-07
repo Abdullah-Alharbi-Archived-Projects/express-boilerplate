@@ -10,5 +10,7 @@
     "level": "dev"
   },
   "static": "public",
-  "jwtSecretKey": ""
+  "jwtSecretKey": "",
+  "etag": false,
+  "powered-by": true
 }
