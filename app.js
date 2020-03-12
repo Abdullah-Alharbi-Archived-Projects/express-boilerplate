@@ -9,6 +9,7 @@ const app = express();
 require("./src/startup/logger")(app);
 require("./src/startup/database")();
 require("./src/startup/handlebars")(app);
+require("./src/startup/session")(app);
 require("./src/startup/config")(app);
 require("./src/startup/middleware")(app);
 require("./src/startup/routes")(app);
