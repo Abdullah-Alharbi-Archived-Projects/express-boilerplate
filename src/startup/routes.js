@@ -1,5 +1,7 @@
-const api = require("../routes/index");
+const routes = require("../routes/");
 
 module.exports = function(app) {
-  app.use("/api/", api);
+  app.use("/api/", routes.api);
+
+  app.use("/", routes.ssr);
 };
