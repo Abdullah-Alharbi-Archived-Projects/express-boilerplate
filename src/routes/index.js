@@ -1,9 +1,16 @@
 const { Router } = require("express");
-const v1 = require("./v1/");
+const apiVersoins = require("./api");
+const ssrVersions = require("./ssr/v1");
 
-const router = Router();
+const api = Router();
+const ssr = Router();
 
 // versions goes here
-router.use("/v1/", v1);
+api.use(apiVersoins);
 
-module.exports = router;
+ssr.use("/", ssrVersions);
+
+module.exports = {
+  api,
+  ssr
+};
