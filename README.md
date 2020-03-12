@@ -1,6 +1,6 @@
 # express-api-structure
 
-scalable express api structure
+scalable express structure
 
 ## Installation
 
