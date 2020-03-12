@@ -1,11 +1,13 @@
 const { static } = require("express");
+const { join } = require("path");
 const config = require("config");
 const serverDebugger = require("debug")("app:server");
 
 module.exports = function(app) {
   if (config.has("static") && config.get("static")) {
-    app.use(static(config.get("static")));
-    serverDebugger(`Serve static files is active "${config.get("static")}".`);
+    const staticPath = join(__dirname, `../${config.get("static")}`);
+    app.use("/public", static(staticPath));
+    serverDebugger(`Serve static files is active at "${staticPath}".`);
   }
 
   // note: if you are developing api disable that
