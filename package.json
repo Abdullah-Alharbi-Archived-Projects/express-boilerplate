@@ -16,6 +16,7 @@
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
     "helmet": "^3.21.2",
     "i18n": "^0.8.4",
     "mongoose": "^5.7.8",
