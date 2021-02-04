@@ -6,7 +6,8 @@
   "scripts": {
     "prod": "node app.js",
     "dev:linux": "export NODE_ENV=development && export debug=app:* && nodemon app.js",
-    "dev:windows": "set NODE_ENV=development && set debug=app:* && nodemon app.js"
+    "dev:windows": "set NODE_ENV=development && set debug=app:* && nodemon app.js",
+    "test": "jest ./src/tests/"
   },
   "keywords": [],
   "dependencies": {
