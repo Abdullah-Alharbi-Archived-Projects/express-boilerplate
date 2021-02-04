@@ -22,7 +22,7 @@
     "knex": "^0.21.17",
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
-    "mysql2": "^2.2.5",
+    "mysql": "^2.18.1",
     "objection": "^2.2.14"
   },
   "devDependencies": {
