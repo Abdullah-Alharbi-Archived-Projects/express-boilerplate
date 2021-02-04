@@ -1,9 +1,10 @@
 {
   "port": 3001,
   "db": {
-    "url": "mongodb://localhost/app_tests",
-    "useNewUrlParser": true,
-    "useFindAndModify": true
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "",
+    "database": "playground-test"
   },
   "logger": {
     "active": true,
