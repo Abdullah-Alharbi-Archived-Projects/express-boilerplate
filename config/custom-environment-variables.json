@@ -1,6 +1,9 @@
 {
   "jwtSecretKey": "app_jwtSecretKey",
   "db": {
-    "url": "app_mongoUrl"
+    "host": "app_db_host",
+    "user": "app_db_user",
+    "password": "app_db_password",
+    "database": "app_db_name"
   }
 }

@@ -1,9 +1,10 @@
 {
   "port": 8001,
   "db": {
-    "url": "",
-    "useNewUrlParser": true,
-    "useFindAndModify": true
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "",
+    "database": "playground-default"
   },
   "logger": {
     "active": true,
