@@ -1,10 +1,11 @@
-const { json } = require("express");
+const { json, urlencoded } = require("express");
 const helmet = require("helmet");
 const compression = require("compression");
 const methodOverride = require("method-override");
 
 module.exports = function(app) {
   app.use(json());
+  app.use(urlencoded({ extended: false }));
   app.use(helmet());
   app.use(compression()); // compress all responses
 

@@ -7,7 +7,7 @@ const port = process.env.PORT || process.argv[2] || config.get("port") || 8000;
 const app = express();
 
 require("./src/startup/logger")(app);
-require("./src/startup/database")();
+require("./src/startup/database");
 require("./src/startup/handlebars")(app);
 require("./src/startup/session")(app);
 require("./src/startup/config")(app);

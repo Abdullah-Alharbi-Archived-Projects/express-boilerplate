@@ -1,4 +1,4 @@
-function index(req, res) {
+async function index(req, res) {
   res.render("index", { message: "World" });
 }
 
