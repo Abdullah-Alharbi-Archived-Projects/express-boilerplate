@@ -12,5 +12,8 @@
   "static": "public",
   "jwtSecretKey": "",
   "etag": false,
-  "powered-by": true
+  "powered-by": true,
+  "session": {
+    "secret": "secretCat"
+  }
 }
