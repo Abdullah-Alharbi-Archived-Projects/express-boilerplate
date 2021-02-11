@@ -1,18 +1,24 @@
 const handlebars = require("express-handlebars");
 const { join } = require("path");
+const { loadConfig } = require("../helpers/env");
 
+/**
+ * @param {Express.Application} app 
+ */
 module.exports = app => {
-  app.set("view engine", "hbs");
-  app.set("views", join(__dirname, "../", "views/pages"));
+  const config = loadConfig('views');
+  
+  app.set("view engine", config.viewEngine);
 
-  const layoutsDir = join(__dirname, "../", "views/layouts/");
-  const partialsDir = join(__dirname, "../", "views/partials/");
+  app.set("views", join(__dirname, "../", `${config.viewsFolder}/${config.pagesFolder}`));
+
+  const layoutsDir = join(__dirname, "../", config.layoutsDir);
+  const partialsDir = join(__dirname, "../", config.partialsDir);
 
   app.engine(
-    "hbs",
+    config.engine,
     handlebars({
-      extname: "hbs",
-      defaultLayout: "default",
+      ...config.handlebars,
       layoutsDir,
       partialsDir
     })
