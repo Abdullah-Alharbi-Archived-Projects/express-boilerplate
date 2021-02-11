@@ -1,19 +1,19 @@
 const serverDebugger = require("debug")("app:server");
-const config = require("config");
+// const config = require("config");
 const express = require("express");
-
-const port = process.env.PORT || process.argv[2] || config.get("port") || 8000;
+const { loadConfig } = require("./src/helpers/env");
 
 const app = express();
+const { port, hostname } = loadConfig('server', 'server');
 
 require("./src/startup/logger")(app);
 require("./src/startup/database");
 require("./src/startup/handlebars")(app);
 require("./src/startup/session")(app);
-require("./src/startup/config")(app);
 require("./src/startup/middleware")(app);
 require("./src/startup/routes")(app);
+require("./src/startup/server")(app);
 
-app.listen(port, () =>
-  serverDebugger(`Listening on http://localhost:${port}/ ...`)
+app.listen(port, hostname, () =>
+  serverDebugger(`Listening on http://${hostname}:${port}/ ...`)
 );
