@@ -20,7 +20,6 @@ module.exports = {
 
         defaultLayout: env('APP_VIEWS_HANDLEBARS_DEFAULT_LAYOUT', 'default'),
 
-        defaultLayout: env('APP_VIEWS_HANDLEBARS_DEFAULT_LAYOUT', 'default'),
     },
 };
 
