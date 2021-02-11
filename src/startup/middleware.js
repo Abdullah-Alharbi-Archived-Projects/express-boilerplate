@@ -3,14 +3,24 @@ const helmet = require("helmet");
 const compression = require("compression");
 const methodOverride = require("method-override");
 
-module.exports = function(app) {
-  app.use(json());
-  app.use(urlencoded({ extended: false }));
-  app.use(helmet());
-  app.use(compression()); // compress all responses
+/**
+ * @param {Express.Application} app 
+ */
+module.exports = app => {
+  const config = require('../config/middleware');
 
-  // methodOverride by header
-  app.use(methodOverride("X-HTTP-Method"));
-  // and by attach ?_method=POST etc... to override the request
-  app.use(methodOverride("_method"));
+  app.use(
+    json(config.json),
+
+    urlencoded(config.urlencoded),
+
+    helmet(config.helmet),
+
+    compression(config.compression),
+
+    // to use this middleware send a POST request with eaither _method=<HTTP_VERB> query string
+    // or send a POST request with this header X-HTTP-Method: <HTTP_VERB> 
+    methodOverride(config.methodOverride.header),
+    methodOverride(config.methodOverride.query)
+  );
 };
