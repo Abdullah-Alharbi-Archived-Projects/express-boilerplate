@@ -1,10 +1,10 @@
 module.exports = {
     getCurrentEnv() {
-        return process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+        return process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
     },
 
-    env(variableName, defaultValue = null) {
-        return process.env[variableName] ? process.env[variableName] : defaultValue;
+    env(variableName = '', defaultValue = null) {
+        return process.env[variableName.toUpperCase()] ? process.env[variableName.toUpperCase()] : defaultValue;
     },
 
 };
