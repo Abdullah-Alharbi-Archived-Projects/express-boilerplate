@@ -1,7 +1,6 @@
-const serverDebugger = require("debug")("app:server");
-// const config = require("config");
-const express = require("express");
 const { loadConfig } = require("./src/helpers/env");
+const serverDebugger = require("debug")("app:server");
+const express = require("express");
 
 const app = express();
 const { port, hostname } = loadConfig('server', 'server');

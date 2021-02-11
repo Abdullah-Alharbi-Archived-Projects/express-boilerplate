@@ -1,5 +1,3 @@
-const {join} = require('path');
-
 const helpers = {
     getCurrentEnv() {
         return process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase() : 'development';
