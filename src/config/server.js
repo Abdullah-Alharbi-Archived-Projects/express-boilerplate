@@ -51,7 +51,7 @@ module.exports = {
 
         poweredBy: env('APP_SERVER_GLOBAL_POWERED_BY', false),
 
-        trustProxy: env('APP_SERVER_TRUST_PROXY', boolOnEnv('production')),
+        trustProxy: env('APP_SERVER_GLOBAL_TRUST_PROXY', boolOnEnv('production')),
     },
 
 
