@@ -47,7 +47,7 @@ module.exports = {
 
 
     global: {
-        etag: env('APP_SERVER_GLOBAL_ETAG', boolOnEnv('development')),
+        etag: env('APP_SERVER_GLOBAL_ETAG', boolOnEnv()),
 
         poweredBy: env('APP_SERVER_GLOBAL_POWERED_BY', false),
     },
