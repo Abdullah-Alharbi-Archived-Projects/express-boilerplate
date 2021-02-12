@@ -9,6 +9,10 @@ const serverDebugger = require("debug")("app:server");
 module.exports = app => {
   const { static: staticConfig, global } = loadConfig({configName: 'server'});
 
+  if (global.trustProxy) {
+    app.set("trust proxy", 1);
+    serverDebugger("Trust proxy is enabled.");
+  }
 
   if (staticConfig.enabled) {
     const staticPath = join(__dirname, `../${staticConfig.folder}`);
@@ -20,8 +24,8 @@ module.exports = app => {
   if (!global.etag) app.disable("etag");
 
   if (typeof global.poweredBy !== 'boolean') {
-    serverDebugger(`Powered By: "${global.poweredBy}".`);
     app.set("x-powered-by", global.poweredBy);
+    serverDebugger(`Powered By: "${global.poweredBy}".`);
   }
 
   if (typeof global.poweredBy === 'boolean' && !global.poweredBy) app.disable("x-powered-by");

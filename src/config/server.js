@@ -50,18 +50,18 @@ module.exports = {
         etag: env('APP_SERVER_GLOBAL_ETAG', boolOnEnv()),
 
         poweredBy: env('APP_SERVER_GLOBAL_POWERED_BY', false),
+
+        trustProxy: env('APP_SERVER_TRUST_PROXY', boolOnEnv('production')),
     },
 
 
     server: {
-        
         port: env('APP_SERVER_PORT', process.argv[2] || 8001),
 
         hostname: env('APP_SERVER_HOST_NAME', 'localhost'),
-        
-        // if you want you can add your callback here 
-        // callback: () => {},
     },
 
 
 };
+
+console.log(module.exports.global);
