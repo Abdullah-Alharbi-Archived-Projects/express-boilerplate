@@ -1,4 +1,4 @@
-describe("Database Tests Suits", () => {
+describe("Database Tests Suite", () => {
     it("should connect", () => {
         const knex = require('../../database');
 

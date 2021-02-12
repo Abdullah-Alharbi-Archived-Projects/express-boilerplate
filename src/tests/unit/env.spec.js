@@ -1,4 +1,4 @@
-describe("Environment unit tests suit", () => {
+describe("Environment unit tests suite", () => {
     it("should read a property from .env file", () => {
         require('dotenv').config();
 
