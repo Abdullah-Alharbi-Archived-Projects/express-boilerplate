@@ -6,7 +6,7 @@ const { loadConfig } = require("../helpers/env");
  * @param {Express.Application} app 
  */
 module.exports = app => {
-  const config = loadConfig('views');
+  const config = loadConfig({configName: 'views'});
   
   app.set("view engine", config.viewEngine);
 

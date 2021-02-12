@@ -7,7 +7,7 @@ const serverDebugger = require("debug")("app:server");
  * @param {Express.Application} app 
  */
 module.exports = app => {
-  const { static: staticConfig, global } = loadConfig('server');
+  const { static: staticConfig, global } = loadConfig({configName: 'server'});
 
 
   if (staticConfig.enabled) {

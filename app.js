@@ -3,7 +3,7 @@ const serverDebugger = require("debug")("app:server");
 const express = require("express");
 
 const app = express();
-const { port, hostname } = loadConfig('server', 'server');
+const { port, hostname } = loadConfig({ configName: 'server', property: 'server'});
 
 require("./src/startup/logger")(app);
 require("./src/startup/database");
