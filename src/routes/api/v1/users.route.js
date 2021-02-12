@@ -1,9 +1,5 @@
-const { Router } = require("express");
+module.exports = {
+    prefix: '/api/v1/users',
+    'GET /': 'users.index',
+};
 
-const userController = require("../../../controllers/users.api.controller");
-const router = Router();
-
-router.get("/", userController.index);
-
-
-module.exports = router;
