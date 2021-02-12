@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
+    "glob": "^7.1.6",
     "helmet": "^4.4.1",
     "i18n": "^0.13.2",
     "knex": "^0.21.17",
