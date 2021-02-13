@@ -27,8 +27,23 @@ async function store(req, res) {
   return res.render("users/create", { error: "All fields can not be empty." });
 }
 
+
+
+
+
+async function apiIndex(req, res) {
+  const users = await User.query();
+
+  if (users.length) {
+      return res.json({ users });
+  }
+
+  return res.json({ message: 'No users yet.' });
+}
+
 module.exports = {
   index,
   create,
-  store
+  store,
+  apiIndex,
 };

@@ -1,5 +1,5 @@
 module.exports = {
     prefix: '/api/v1/users',
-    'GET /': 'users.index',
+    'GET /': 'user.apiIndex',
 };
 
