@@ -1,6 +1,5 @@
 # 💎 express-boilerplate
-this is my full-stack boilerplate currently it uses handlebars, objection.js + knex <br>it has powerful routing system, it uses jest for testing.
-
+this is my full-stack boilerplate currently it uses handlebars, objection.js + knex <br>it has powerful routing system, it uses jest for testing, [docs](https://github.com/W2AlharbiMe/express-boilerplate/wiki).
 ## 🌟 Features
 - [x] easy routing system.
 - [x] Integrated ORM.
