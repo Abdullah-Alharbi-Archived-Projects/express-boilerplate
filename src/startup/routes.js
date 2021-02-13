@@ -7,7 +7,11 @@ module.exports = app => {
       const routeConfig = require(join(__dirname, '..', match.replace('src/', '')));
 
       const keys = Object.keys(routeConfig);
-      const keyParser = key => key.replace(/\s+/, ' ').split(/ /);
+      const keyParser = key => {
+        const newKey = key.replace(/\s+/, ' ').split(/ /);
+        if(newKey.length === 1) return [,newKey];
+        return newKey;
+      };
       const controllerParser = c => c.replace(/\.+/, '.').split('.')
 
       const verbs = ['get', 'post', 'put', 'head', 'delete', 'options'];
@@ -16,7 +20,7 @@ module.exports = app => {
         if (key !== 'prefix') {
           const [controllerName, method = 'index'] = controllerParser(routeConfig[key]);
 
-          const [verb = 'GET', path] = keyParser(key);
+          let [verb = 'GET', path] = keyParser(key);
 
           const controller =
             require(`../controllers/${controllerName.toLowerCase()}.controller.js`);
@@ -29,6 +33,7 @@ module.exports = app => {
 
           const prefixedRoute = routeConfig.prefix ? `${routeConfig.prefix}${path}` : path;
 
+          
           app[verbs.find(v => verb.toLowerCase() === v)](prefixedRoute, controller[method]);
         }
       });
